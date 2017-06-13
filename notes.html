@@ -21,13 +21,16 @@
 		header{padding: 20px 0; border-bottom: 1px solid; margin-bottom: 50px;}
 		.header-p{text-align: center; font-size: 2.5em;}
 		
-		.subject{font-size: 2em;}
+		.subject{font-size: 2em; margin-bottom: 20px;}
 		.example-div{background: #f4f7f8; padding: 20px; margin: 20px; display: inline-block; border: 1px solid #ddd;}
 		.example-div p{margin-bottom: 10px;}
 		.token{color: #07a;}
 		.keyword{color: #DD4A68;}
 		.learn-link{color: blue !important; text-decoration: underline !important; font-size: .75em !important;}
-		.method-div{margin: 50px 0;}
+		.openMe{display: none;}
+		.method-title{font-weight: bold; text-decoration: underline; cursor: pointer;}
+		.method-div{margin: 10px 0;}
+		.display{display: inline-block;}
 	</style>
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,13 +46,15 @@
 			<div class="subject-div"> 
 				<p class="subject"><u>Array Methods</u></p>
 				<div class="method-div">
-					<p><b>Array.concat()</b> -  method that is used to merge two or more arrays. This method does <u>not</u> change the existing arrays, but instead returns a new array. Takes in as many array parameters as needed to combine. (combining elemnts of two arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=control" class="learn-link" target="_blank">Learn More</a></p> 
+					<p><span class="method-title">Array.concat()</span> <span class="openMe">- method that is used to merge two or more arrays. This method does <u>not</u> change the existing arrays, but instead returns a new array. Takes in as many array parameters as needed to combine. (combining elemnts of two arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=control" class="learn-link" target="_blank">Learn More</a></span></p> 
+					<div class="openMe">
 					<div class="example-div">
 						<p><span class="token">var</span> Array1 = ['a', 'b', 'c'];</p>
 						<p><span class="token">var</span> Array2 = [1, 2, 3];</p>
 						<p>Array1.<span class="keyword">concat</span>(Array2);</p>
 						<p>results in ['a', 'b', 'c', 1, 2, 3]</p>
-					</div><br>
+					</div>
+					</div>
 				</div><!--   method div   -->
 			
 			<div class="method-div">
@@ -61,11 +66,20 @@
 						<p>Array.<span class="keyword">indexOf(7)</span> = -1</p>
 						<p>Array.<span class="keyword">indexOf(9, 2)</span> = 2</p>
 						<p>Array.<span class="keyword">indexOf(2, -3)</span> = 0</p>
-					</div><br>
+					</div>
 				</div><!--   method div   -->
 
 			</div><!--   subject div   -->
 		</div><!--  container  -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".method-title").click(function(){
+		   		$(this).find(".openMe").slideToggle( 1200, function() {
+		   		$(this).find(".openMe").toggleClass("display");
+			})
+		});
+			});
+		</script>
 	</body>
 	</html>
