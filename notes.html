@@ -31,6 +31,7 @@
 		.method-title{font-weight: bold; text-decoration: underline; cursor: pointer;}
 		.method-div{margin: 10px 0;}
 		.display{display: inline-block;}
+		.martop15{margin-top: 15px;}
 	</style>
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -46,8 +47,9 @@
 			<div class="subject-div"> 
 				<p class="subject"><u>Array Methods</u></p>
 				<div class="method-div">
-					<p><span class="method-title">Array.concat()</span> <span class="openMe">- method that is used to merge two or more arrays. This method does <u>not</u> change the existing arrays, but instead returns a new array. Takes in as many array parameters as needed to combine. (combining elemnts of two arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=control" class="learn-link" target="_blank">Learn More</a></span></p> 
-					<div class="openMe">
+				<p class="method-title">Array.concat()</p>
+				<div class="openMe">
+					<p class="martop15">Method that is used to merge two or more arrays. This method does <u>not</u> change the existing arrays, but instead returns a new array. Takes in as many array parameters as needed to combine. (combining elemnts of two arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=control" class="learn-link" target="_blank">Learn More</a></p> 
 					<div class="example-div">
 						<p><span class="token">var</span> Array1 = ['a', 'b', 'c'];</p>
 						<p><span class="token">var</span> Array2 = [1, 2, 3];</p>
@@ -58,7 +60,9 @@
 				</div><!--   method div   -->
 			
 			<div class="method-div">
-					<p><b>Array.indexOf()</b> -  method returns the first index at which a given element can be found in the array, or -1 if it is not present. Takes in 2 parameters. The first is the element in the array you wish to find the index of. The second parameter is optional and dictates where to start the search. Negative values will start at the given position counting from the end, and search to the end. (finds the index of an element inside a given array) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf?v=control" class="learn-link" target="_blank">Learn More</a></p> 
+				<p class="method-title">Array.indexOf()</p>
+				<div class="openMe">
+					<p class="martop15">method returns the first index at which a given element can be found in the array, or -1 if it is not present. Takes in 2 parameters. The first is the element in the array you wish to find the index of. The second parameter is optional and dictates where to start the search. Negative values will start at the given position counting from the end, and search to the end. (finds the index of an element inside a given array) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf?v=control" class="learn-link" target="_blank">Learn More</a></p> 
 					<div class="example-div">
 						<p><span class="token">var</span> Array = [2, 9, 9];</p>
 						<p>Array.<span class="keyword">indexOf(2)</span> = 0</p>
@@ -67,6 +71,7 @@
 						<p>Array.<span class="keyword">indexOf(9, 2)</span> = 2</p>
 						<p>Array.<span class="keyword">indexOf(2, -3)</span> = 0</p>
 					</div>
+					</div>
 				</div><!--   method div   -->
 
 			</div><!--   subject div   -->
@@ -74,7 +79,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
-				$(".method-title").click(function(){
+				$(".method-div").click(function(){
 		   		$(this).find(".openMe").slideToggle( 1200, function() {
 		   		$(this).find(".openMe").toggleClass("display");
 			})
