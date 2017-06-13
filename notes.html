@@ -20,7 +20,13 @@
 
 		header{padding: 20px 0; border-bottom: 1px solid; margin-bottom: 50px;}
 		.header-p{text-align: center; font-size: 2.5em;}
-
+		
+		.subject{font-size: 2em; margin-bottom: 25px;}
+		.example-div{background: #f4f7f8; padding: 20px; margin: 20px; display: inline-block;}
+		.example-div p{margin-bottom: 10px;}
+		.token{color: #07a;}
+		.keyword{color: #DD4A68;}
+		.learn-link{color: blue !important; text-decoration: underline !important; font-size: .75em !important;}
 	</style>
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,7 +39,17 @@
 			</div>
 		</header>
 		<div class="container">
-			
+		  <div class="subject-div">
+			<p class="subject"><u>Array Methods</u></p>
+			<p><b>Array.concat()</b> -  method that is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=control" class="learn-link">Learn More</a></p> 
+			<div class="example-div">
+				<p><span class="token">var</span> Array1 = ['a', 'b', 'c'];</p>
+				<p><span class="token">var</span> Array2 = [1, 2, 3];</p>
+				<p>Array1.<span class="keyword">concat</span>(Array2);</p>
+				<p>results in ['a', 'b', 'c', 1, 2, 3]</p>
+			</div><br>
+		</div>
+
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</body>
