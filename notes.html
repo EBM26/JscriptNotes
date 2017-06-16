@@ -55,7 +55,7 @@
 				<p class="subject"><u>Array Methods</u></p>
 
 				<div class="method-div">
-					<p class="method-title">Array.concat()</p>
+					<p class="method-title">Array.<span class="keyword">concat()</span></p>
 					<div class="openMe">
 						<p class="martop15">Method that is used to merge two or more arrays. This method does <u>not</u> change the existing arrays, but instead returns a new array. Takes in as many array parameters as needed to combine. (combining elemnts of two arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=control" class="learn-link" target="_blank">Learn More</a></p> 
 						<div class="example-div">
@@ -68,7 +68,7 @@
 				</div><!--   method div   -->
 
 				<div class="method-div">
-					<p class="method-title">Array.indexOf()</p>
+					<p class="method-title">Array.<span class="keyword">indexOf()</span></p>
 					<div class="openMe">
 					<p class="martop15">This method returns the first index at which a given element can be found in the array, or -1 if it is not present. Takes in <u>2 parameters</u>. The <u>first parameter</u> is the element in the array you wish to find the index of. The <u>second parameter</u> is optional and dictates where to start the search. Negative values will start at the given position counting from the end, and search to the end. (finds the index of an element inside a given array) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf?v=control" class="learn-link" target="_blank">Learn More</a></p> 
 						<div class="example-div">
@@ -83,7 +83,7 @@
 				</div><!--   method div   -->
 
 				<div class="method-div">
-					<p class="method-title">Array.from()</p>
+					<p class="method-title">Array.<span class="keyword">from()</span></p>
 					<div class="openMe">
 					<p class="martop15">This method creates a new Array instance from an array-like or iterable object. Takes in <u>3 parameters</u>. The <u>first parameter</u> is required and is of an array-like or iterable object to convert to an array. The <u>second parameter</u> is a map function to call on every element of the array and is optional if you wish to changes to each element while creating a new one. The <u>third parameter</u> is a value to use as this when executing mapFn and is optional. (makes a new array from different objects that are similar to arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from?v=control" class="learn-link" target="_blank">Learn More</a></p> 
 						<div class="example-div">
@@ -92,6 +92,20 @@
 						<div class="example-div">
 							<p><span class="token">var</span> s = <span class="token">new</span> Set([<span class="string-color">'foo'</span>, window]);</p>
 							<p>Array.<span class="keyword">from</span>(s) = ["foo", window]</p>
+						</div>
+					</div>
+				</div><!--   method div   -->
+
+				<div class="method-div">
+					<p class="method-title">Array.<span class="keyword">isArray()</span></p>
+					<div class="openMe">
+					<p class="martop15">This method determines whether an object is an array.This function returns true if the object is an array, and false if not. Takes in <u>1 parameter</u> which is the object array to be checked.<a href="https://www.w3schools.com/jsref/jsref_isarray.asp" class="learn-link" target="_blank">Learn More</a></p> 
+						<div class="example-div">
+							<p><span class="token">function</span> myFunction() {<br><span class="token">var</span> fruits = [<span class="string-color">"Banana"</span>, <span class="string-color">"Orange"</span>, <span class="string-color">"Apple"</span>, <span class="string-color">"Mango"</span>];<br>
+    						<span class="token">var</span> x = document.getElementById(<span class="string-color">"demo"</span>);<br>
+   							x.innerHTML = Array.<span class="keyword">isArray</span>(fruits);<br>
+							}</p>
+							<p>function will return <span class="token">true</span></p>
 						</div>
 					</div>
 				</div><!--   method div   -->
