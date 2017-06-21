@@ -62,7 +62,20 @@
 				<div class="method-div">
 					<p class="method-title">Array.<span class="keyword">concat()</span></p>
 					<div class="openMe">
-						<p class="martop15">Method that is used to merge two or more arrays. This method does <u>not</u> change the existing arrays, but instead returns a new array. Takes in as many array parameters as needed to combine. (combining elemnts of two arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=control" class="learn-link" target="_blank">Learn More</a></p> 
+						<p class="martop15">Method that is used to merge two or more arrays. This method does <b>not</b> change the existing arrays, but instead returns a new array. Takes in as many array parameters as needed to combine. (combining elemnts of two arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=control" class="learn-link" target="_blank">Learn More</a></p> 
+						<div class="example-div">
+							<p><span class="token">var</span> Array1 = ['a', 'b', 'c'];</p>
+							<p><span class="token">var</span> Array2 = [1, 2, 3];</p>
+							<p>Array1.<span class="keyword">concat</span>(Array2);</p>
+							<p>results in ['a', 'b', 'c', 1, 2, 3]</p>
+						</div>
+					</div>
+				</div><br><!--   method div   -->
+
+				<div class="method-div">
+					<p class="method-title">Array.<span class="keyword">copyWithin()</span></p>
+					<div class="openMe">
+						<p class="martop15">The method shallow-copies part of an array to another location in the same array and returns it, without modifying its size. Takes in <b>3 parameters</b>. The first parameter, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin?v=control" class="learn-link" target="_blank">Learn More</a> <a href="http://www.codeblocq.com/2016/02/Copy-an-Array-into-itself-in-JavaScript-ES6-2015/" class="learn-link" target="_blank">More info if needed</a></p> 
 						<div class="example-div">
 							<p><span class="token">var</span> Array1 = ['a', 'b', 'c'];</p>
 							<p><span class="token">var</span> Array2 = [1, 2, 3];</p>
@@ -75,7 +88,7 @@
 				<div class="method-div">
 					<p class="method-title">Array.<span class="keyword">from()</span></p>
 					<div class="openMe">
-					<p class="martop15">This method creates a new Array instance from an array-like or iterable object. Takes in <u>3 parameters</u>. The <u>first parameter</u> is required and is of an array-like or iterable object to convert to an array. The <u>second parameter</u> is a map function to call on every element of the array and is optional if you wish to changes to each element while creating a new one. The <u>third parameter</u> is a value to use as this when executing mapFn and is optional. (makes a new array from different objects that are similar to arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from?v=control" class="learn-link" target="_blank">Learn More</a></p> 
+					<p class="martop15">This method creates a new Array instance from an array-like or iterable object. Takes in <b>3 parameters</b>. The <b>first parameter</b>, <span class="token">arrayLike</span>, is required and is of an array-like or iterable object to convert to an array. The <b>second parameter</b>, <span class="token">mapFn</span>, is a map function to call on every element of the array and is optional if you wish to changes to each element while creating a new one. The <b>third parameter</b>, <span class="token">thisArg</span>, is a value to use as this when executing mapFn and is optional. (makes a new array from different objects that are similar to arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from?v=control" class="learn-link" target="_blank">Learn More</a></p> 
 						<div class="example-div">
 							<p>Array.<span class="keyword">from</span>(<span class="string-color">'foo'</span>) = ["f", "o", "o"]</p>
 						</div>
@@ -89,7 +102,7 @@
 				<div class="method-div">
 					<p class="method-title">Array.<span class="keyword">indexOf()</span></p>
 					<div class="openMe">
-					<p class="martop15">This method returns the first index at which a given element can be found in the array, or -1 if it is not present. Takes in <u>2 parameters</u>. The <u>first parameter</u> is the element in the array you wish to find the index of. The <u>second parameter</u> is optional and dictates where to start the search. Negative values will start at the given position counting from the end, and search to the end. (finds the index of an element inside a given array) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf?v=control" class="learn-link" target="_blank">Learn More</a></p> 
+					<p class="martop15">This method returns the first index at which a given element can be found in the array, or -1 if it is not present. Takes in <b>2 parameters</b>. The <b>first parameter</b>, <span class="token">searchElement</span>, is the element in the array you wish to find the index of. The <b>second parameter</b>, <span class="token">fromIndex</span>, is optional and dictates where to start the search. Negative values will start at the given position counting from the end, and search to the end. (finds the index of an element inside a given array) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf?v=control" class="learn-link" target="_blank">Learn More</a></p> 
 						<div class="example-div">
 							<p><span class="token">var</span> Array = [2, 9, 9];</p>
 							<p>Array.<span class="keyword">indexOf(2)</span> = 0</p>
@@ -104,7 +117,7 @@
 				<div class="method-div">
 					<p class="method-title">Array.<span class="keyword">isArray()</span></p>
 					<div class="openMe">
-					<p class="martop15">This method determines whether an object is an array.This function returns true if the object is an array, and false if not. Takes in <u>1 parameter</u> which is the object array to be checked.<a href="https://www.w3schools.com/jsref/jsref_isarray.asp" class="learn-link" target="_blank">Learn More</a></p> 
+					<p class="martop15">This method determines whether an object is an array.This function returns true if the object is an array, and false if not. Takes in <b>1 parameter</b>, <span class="token">obj</span>, which is the object array to be checked.<a href="https://www.w3schools.com/jsref/jsref_isarray.asp" class="learn-link" target="_blank">Learn More</a></p> 
 						<div class="example-div">
 							<p><span class="token">function</span> myFunction() {<br><span class="token">var</span> fruits = [<span class="string-color">"Banana"</span>, <span class="string-color">"Orange"</span>, <span class="string-color">"Apple"</span>, <span class="string-color">"Mango"</span>];<br>
     						<span class="token">var</span> x = document.getElementById(<span class="string-color">"demo"</span>);<br>
@@ -118,7 +131,7 @@
 				<div class="method-div">
 					<p class="method-title">Array.<span class="keyword">of()</span></p>
 					<div class="openMe">
-					<p class="martop15">This method creates a new Array instance with a variable number of arguments, regardless of number or type of the arguments. Similar to the Array constructor method. The difference between Array.of() and the Array constructor is in the handling of integer arguments: Array.<span class="keyword">of</span>(7) creates an array with a single element, 7, whereas Array(7) creates an empty array with a length property of 7 Takes in <u>1 parameter</u> which is the object array to be checked.<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of?v=control" class="learn-link" target="_blank">Learn More</a></p> 
+					<p class="martop15">This method creates a new Array instance with a variable number of arguments, regardless of number or type of the arguments. Similar to the Array constructor method. The difference between Array.of() and the Array constructor is in the handling of integer arguments: Array.<span class="keyword">of</span>(7) creates an array with a single element, 7, whereas Array(7) creates an empty array with a length property of 7.<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of?v=control" class="learn-link" target="_blank">Learn More</a></p> 
 						<div class="example-div">
 							<p>Array.<span class="keyword">of</span>(<span class="string-color">1</span>) = [1]<br>
 								Array.<span class="keyword">of</span>(<span class="string-color">1</span>, <span class="string-color">2</span>, <span class="string-color">3</span>) = [1]<br>
