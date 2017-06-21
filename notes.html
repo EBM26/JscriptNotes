@@ -5,10 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 	<meta name="format-detection" content="telephone=no">
 	<link rel="icon" type="image/x-icon" href="images/icon.png" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Work+Sans" rel="stylesheet">
 	<title>Eyal's Javascript Notes</title>
 	<style>
 		*{margin: 0; padding: 0; max-width: 100%; -webkit-backface-visibility: hidden;}
-		body{font-size: 17px; font-weight: 300; background-color: #fff;  color: #000; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; letter-spacing: 1.2px;}
+		body{font-size: 17px; font-weight: 300; background-color: #fff;  color: #000; font-family: 'Open Sans', sans-serif; letter-spacing: 1.2px;}
 		li{list-style-type: none;}
 		div{display: block; margin: 0; padding: 0;}
 		img{border: 0;}
@@ -32,7 +33,7 @@
 		.openMe{display: none;}
 		.method-title{font-weight: bold; cursor: pointer; border-bottom: 2px solid; display: inline-block; 
 					  padding-bottom: 1px;}
-		.method-div{margin: 10px 0;}
+		.method-div{margin: 10px 0; display: inline-block;}
 		.display{display: inline-block;}
 		.martop15{margin-top: 15px;}
 		.string-color{color: #690;}
@@ -69,7 +70,21 @@
 							<p>results in ['a', 'b', 'c', 1, 2, 3]</p>
 						</div>
 					</div>
-				</div><!--   method div   -->
+				</div><br><!--   method div   -->
+
+				<div class="method-div">
+					<p class="method-title">Array.<span class="keyword">from()</span></p>
+					<div class="openMe">
+					<p class="martop15">This method creates a new Array instance from an array-like or iterable object. Takes in <u>3 parameters</u>. The <u>first parameter</u> is required and is of an array-like or iterable object to convert to an array. The <u>second parameter</u> is a map function to call on every element of the array and is optional if you wish to changes to each element while creating a new one. The <u>third parameter</u> is a value to use as this when executing mapFn and is optional. (makes a new array from different objects that are similar to arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from?v=control" class="learn-link" target="_blank">Learn More</a></p> 
+						<div class="example-div">
+							<p>Array.<span class="keyword">from</span>(<span class="string-color">'foo'</span>) = ["f", "o", "o"]</p>
+						</div>
+						<div class="example-div">
+							<p><span class="token">var</span> s = <span class="token">new</span> Set([<span class="string-color">'foo'</span>, window]);</p>
+							<p>Array.<span class="keyword">from</span>(s) = ["foo", window]</p>
+						</div>
+					</div>
+				</div><br><!--   method div   -->
 
 				<div class="method-div">
 					<p class="method-title">Array.<span class="keyword">indexOf()</span></p>
@@ -84,21 +99,7 @@
 							<p>Array.<span class="keyword">indexOf(2, -3)</span> = 0</p>
 						</div>
 					</div>
-				</div><!--   method div   -->
-
-				<div class="method-div">
-					<p class="method-title">Array.<span class="keyword">from()</span></p>
-					<div class="openMe">
-					<p class="martop15">This method creates a new Array instance from an array-like or iterable object. Takes in <u>3 parameters</u>. The <u>first parameter</u> is required and is of an array-like or iterable object to convert to an array. The <u>second parameter</u> is a map function to call on every element of the array and is optional if you wish to changes to each element while creating a new one. The <u>third parameter</u> is a value to use as this when executing mapFn and is optional. (makes a new array from different objects that are similar to arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from?v=control" class="learn-link" target="_blank">Learn More</a></p> 
-						<div class="example-div">
-							<p>Array.<span class="keyword">from</span>(<span class="string-color">'foo'</span>) = ["f", "o", "o"]</p>
-						</div>
-						<div class="example-div">
-							<p><span class="token">var</span> s = <span class="token">new</span> Set([<span class="string-color">'foo'</span>, window]);</p>
-							<p>Array.<span class="keyword">from</span>(s) = ["foo", window]</p>
-						</div>
-					</div>
-				</div><!--   method div   -->
+				</div><br><!--   method div   -->
 
 				<div class="method-div">
 					<p class="method-title">Array.<span class="keyword">isArray()</span></p>
@@ -112,7 +113,9 @@
 							<p>function will return <span class="token">true</span></p>
 						</div>
 					</div>
-				</div><!--   method div   -->
+				</div><br><!--   method div   -->
+
+
 
 			</div><!--   subject div   -->
 		</div><!--  container  -->
