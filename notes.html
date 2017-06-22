@@ -9,7 +9,7 @@
 	<title>Eyal's Javascript Notes</title>
 	<style>
 		*{margin: 0; padding: 0; max-width: 100%; -webkit-backface-visibility: hidden;}
-		body{font-size: 17px; font-weight: 300; background-color: #fff;  color: #000; font-family: 'Open Sans', sans-serif; letter-spacing: 1.2px;}
+		body{font-size: 17px; font-weight: 300; background-color: #fff;  color: #000; font-family: 'Open Sans', sans-serif; letter-spacing: 1.1px;}
 		li{list-style-type: none;}
 		div{display: block; margin: 0; padding: 0;}
 		img{border: 0;}
@@ -24,7 +24,7 @@
 		.header-p{font-size: 2.5em; display: inline-block; vertical-align: 8px; margin-left: 30px;}
 		#logo-pic{width: 140px;}
 		
-		.subject{font-size: 2em; margin-bottom: 20px;}
+		.subject{font-size: 2em; margin-bottom: 20px; color: #d22;}
 		.example-div{background: #f4f7f8; padding: 20px; margin: 20px; display: inline-block; border: 1px solid #ddd;}
 		.example-div p{margin-bottom: 10px;}
 		.token{color: #07a;}
@@ -57,16 +57,16 @@
 		</header>
 		<div class="container">
 			<div class="subject-div"> 
-				<p class="subject"><u>Array Methods</u></p>
+				<p class="subject">Array Methods ['A', 'B', 'C']</p>
 
 				<div class="method-div">
 					<p class="method-title">Array.<span class="keyword">concat()</span></p>
 					<div class="openMe">
-						<p class="martop15">Method that is used to merge two or more arrays. This method does <b>not</b> change the existing arrays, but instead returns a new array. Takes in as many array parameters as needed to combine. (combining elemnts of two arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=control" class="learn-link" target="_blank">Learn More</a></p> 
+						<p class="martop15">Method that is used to merge two or more arrays. This method does <b>not</b> change the existing arrays, but instead returns a new array. Accepts as many array parameters as needed to combine. (combining elemnts of two arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=control" class="learn-link" target="_blank">Learn More</a></p> 
 						<div class="example-div">
-							<p><span class="token">var</span> Array1 = ['a', 'b', 'c'];</p>
-							<p><span class="token">var</span> Array2 = [1, 2, 3];</p>
-							<p>Array1.<span class="keyword">concat</span>(Array2);</p>
+							<p><span class="token">var</span> <span class="string-color">Array1</span> = ['a', 'b', 'c'];</p>
+							<p><span class="token">var</span> <span class="string-color">Array2</span> = [1, 2, 3];</p>
+							<p><span class="string-color">Array1</span>.<span class="keyword">concat</span>(Array2);</p>
 							<p>results in ['a', 'b', 'c', 1, 2, 3]</p>
 						</div>
 					</div>
@@ -75,12 +75,12 @@
 				<div class="method-div">
 					<p class="method-title">Array.<span class="keyword">copyWithin()</span></p>
 					<div class="openMe">
-						<p class="martop15">The method shallow-copies part of an array to another location in the same array and returns it, without modifying its size. Takes in <b>3 parameters</b>. The first parameter, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin?v=control" class="learn-link" target="_blank">Learn More</a> <a href="http://www.codeblocq.com/2016/02/Copy-an-Array-into-itself-in-JavaScript-ES6-2015/" class="learn-link" target="_blank">More info if needed</a></p> 
+						<p class="martop15">The method shallow-copies part of an array to another location in the same array and returns it, without modifying its size. (copies array elements and places them in a desired location within the array itself) Accepts <b>3 parameters</b>. The <b>first parameter</b>, <span class="token">target</span>, is required and dictates the location in which the elements will be placed. If negative, <span class="token">target</span> will be counted from the end. If <span class="token">target</span> is at or greater than <span class="token">arr.length</span>, nothing will be copied. If target is positioned after start, the copied sequence will be trimmed to fit <span class="token">arr.length</span>. The <b>second parameter</b>, <span class="token">start</span>, is optional (although many except Mozilla say it is required) and dictates the start point of which elements in the array to copy. If negative, <span class="token">start</span> will be counted from the end. If <span class="token">start</span> is omitted, copyWithin will copy from the start (defaults to 0). The <b>third parameter</b>, <span class="token">end</span>, is optional and dictates at which element to stop copying. <span class="keyword">copyWithin</span> copies up to but not including <span class="token">end</span> (up to but not including). If negative, <span class="token">end</span> will be counted from the end. If <span class="token">end</span> is omitted, copyWithin will copy until the end (default to arr.length).<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin?v=control" class="learn-link" target="_blank">Learn More</a> <a href="http://www.codeblocq.com/2016/02/Copy-an-Array-into-itself-in-JavaScript-ES6-2015/" class="learn-link" target="_blank">More info if needed</a></p> 
 						<div class="example-div">
-							<p><span class="token">var</span> Array1 = ['a', 'b', 'c'];</p>
-							<p><span class="token">var</span> Array2 = [1, 2, 3];</p>
-							<p>Array1.<span class="keyword">concat</span>(Array2);</p>
-							<p>results in ['a', 'b', 'c', 1, 2, 3]</p>
+							<p>[1, 2, 3, 4, 5].<span class="keyword">copyWithin</span>(-2) = [1, 2, 3, 1, 2]</p>
+							<p>[1, 2, 3, 4, 5].<span class="keyword">copyWithin</span>(0, 3) = [4, 5, 3, 4, 5]</p>
+							<p>[1, 2, 3, 4, 5].<span class="keyword">copyWithin</span>(0, 3, 4) = [4, 2, 3, 4, 5]</p>
+							<p>[1, 2, 3, 4, 5].<span class="keyword">copyWithin</span>(-2, -3, -1) = [1, 2, 3, 3, 4]</p>
 						</div>
 					</div>
 				</div><br><!--   method div   -->
@@ -88,13 +88,13 @@
 				<div class="method-div">
 					<p class="method-title">Array.<span class="keyword">from()</span></p>
 					<div class="openMe">
-					<p class="martop15">This method creates a new Array instance from an array-like or iterable object. Takes in <b>3 parameters</b>. The <b>first parameter</b>, <span class="token">arrayLike</span>, is required and is of an array-like or iterable object to convert to an array. The <b>second parameter</b>, <span class="token">mapFn</span>, is a map function to call on every element of the array and is optional if you wish to changes to each element while creating a new one. The <b>third parameter</b>, <span class="token">thisArg</span>, is a value to use as this when executing mapFn and is optional. (makes a new array from different objects that are similar to arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from?v=control" class="learn-link" target="_blank">Learn More</a></p> 
+					<p class="martop15">This method creates a new Array instance from an array-like or iterable object. Accepts <b>3 parameters</b>. The <b>first parameter</b>, <span class="token">arrayLike</span>, is required and is of an array-like or iterable object to convert to an array. The <b>second parameter</b>, <span class="token">mapFn</span>, is a map function to call on every element of the array and is optional if you wish to changes to each element while creating a new one. The <b>third parameter</b>, <span class="token">thisArg</span>, is a value to use as this when executing mapFn and is optional. (makes a new array from different objects that are similar to arrays) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from?v=control" class="learn-link" target="_blank">Learn More</a></p> 
 						<div class="example-div">
-							<p>Array.<span class="keyword">from</span>(<span class="string-color">'foo'</span>) = ["f", "o", "o"]</p>
+							<p>Array.<span class="keyword">from</span>('foo') = ["f", "o", "o"]</p>
 						</div>
 						<div class="example-div">
-							<p><span class="token">var</span> s = <span class="token">new</span> Set([<span class="string-color">'foo'</span>, window]);</p>
-							<p>Array.<span class="keyword">from</span>(s) = ["foo", window]</p>
+							<p><span class="token">var</span> <span class="string-color">s</span> = <span class="token">new</span> Set(['foo', window]);</p>
+							<p>Array.<span class="keyword">from</span>(<span class="string-color">s</span>) = ["foo", window]</p>
 						</div>
 					</div>
 				</div><br><!--   method div   -->
@@ -102,14 +102,14 @@
 				<div class="method-div">
 					<p class="method-title">Array.<span class="keyword">indexOf()</span></p>
 					<div class="openMe">
-					<p class="martop15">This method returns the first index at which a given element can be found in the array, or -1 if it is not present. Takes in <b>2 parameters</b>. The <b>first parameter</b>, <span class="token">searchElement</span>, is the element in the array you wish to find the index of. The <b>second parameter</b>, <span class="token">fromIndex</span>, is optional and dictates where to start the search. Negative values will start at the given position counting from the end, and search to the end. (finds the index of an element inside a given array) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf?v=control" class="learn-link" target="_blank">Learn More</a></p> 
+					<p class="martop15">This method returns the first index at which a given element can be found in the array, or -1 if it is not present. Accepts <b>2 parameters</b>. The <b>first parameter</b>, <span class="token">searchElement</span>, is the element in the array you wish to find the index of. The <b>second parameter</b>, <span class="token">fromIndex</span>, is optional and dictates where to start the search. Negative values will start at the given position counting from the end, and search to the end. (finds the index of an element inside a given array) <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf?v=control" class="learn-link" target="_blank">Learn More</a></p> 
 						<div class="example-div">
-							<p><span class="token">var</span> Array = [2, 9, 9];</p>
-							<p>Array.<span class="keyword">indexOf(2)</span> = 0</p>
-							<p>Array.<span class="keyword">indexOf(9)</span> = 1</p>
-							<p>Array.<span class="keyword">indexOf(7)</span> = -1</p>
-							<p>Array.<span class="keyword">indexOf(9, 2)</span> = 2</p>
-							<p>Array.<span class="keyword">indexOf(2, -3)</span> = 0</p>
+							<p><span class="token">var</span> <span class="string-color">Array</span> = [2, 9, 9];</p>
+							<p><span class="string-color">Array</span>.<span class="keyword">indexOf</span>(2) = 0</p>
+							<p><span class="string-color">Array</span>.<span class="keyword">indexOf</span>(9) = 1</p>
+							<p><span class="string-color">Array</span>.<span class="keyword">indexOf</span>(7) = -1</p>
+							<p><span class="string-color">Array</span>.<span class="keyword">indexOf</span>(9, 2) = 2</p>
+							<p><span class="string-color">Array</span>.<span class="keyword">indexOf</span>(2, -3) = 0</p>
 						</div>
 					</div>
 				</div><br><!--   method div   -->
@@ -117,10 +117,10 @@
 				<div class="method-div">
 					<p class="method-title">Array.<span class="keyword">isArray()</span></p>
 					<div class="openMe">
-					<p class="martop15">This method determines whether an object is an array.This function returns true if the object is an array, and false if not. Takes in <b>1 parameter</b>, <span class="token">obj</span>, which is the object array to be checked.<a href="https://www.w3schools.com/jsref/jsref_isarray.asp" class="learn-link" target="_blank">Learn More</a></p> 
+					<p class="martop15">This method determines whether an object is an array.This function returns true if the object is an array, and false if not. Accepts <b>1 parameter</b>, <span class="token">obj</span>, which is the object array to be checked.<a href="https://www.w3schools.com/jsref/jsref_isarray.asp" class="learn-link" target="_blank">Learn More</a></p> 
 						<div class="example-div">
-							<p><span class="token">function</span> myFunction() {<br><span class="token">var</span> fruits = [<span class="string-color">"Banana"</span>, <span class="string-color">"Orange"</span>, <span class="string-color">"Apple"</span>, <span class="string-color">"Mango"</span>];<br>
-    						<span class="token">var</span> x = document.getElementById(<span class="string-color">"demo"</span>);<br>
+							<p><span class="token">function</span> <span class="string-color">myFunction()</span> {<br><span class="token">var</span> fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+    						<span class="token">var</span> x = document.getElementById("demo"</span>);<br>
    							x.innerHTML = Array.<span class="keyword">isArray</span>(fruits);<br>
 							}</p>
 							<p>function will return <span class="token">true</span></p>
@@ -133,8 +133,8 @@
 					<div class="openMe">
 					<p class="martop15">This method creates a new Array instance with a variable number of arguments, regardless of number or type of the arguments. Similar to the Array constructor method. The difference between Array.of() and the Array constructor is in the handling of integer arguments: Array.<span class="keyword">of</span>(7) creates an array with a single element, 7, whereas Array(7) creates an empty array with a length property of 7.<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of?v=control" class="learn-link" target="_blank">Learn More</a></p> 
 						<div class="example-div">
-							<p>Array.<span class="keyword">of</span>(<span class="string-color">1</span>) = [1]<br>
-								Array.<span class="keyword">of</span>(<span class="string-color">1</span>, <span class="string-color">2</span>, <span class="string-color">3</span>) = [1]<br>
+							<p>Array.<span class="keyword">of</span>(1) = [1]<br>
+								Array.<span class="keyword">of</span>(1, 2, 3) = [1]<br>
 								Array.<span class="keyword">of</span>(undefined) = [undefined]
 							</p>
 						</div>
